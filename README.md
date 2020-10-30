@@ -1,3 +1,3 @@
 # project1
 
-This is the readme of my first project
+This is the readme of my NLP project
