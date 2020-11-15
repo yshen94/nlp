@@ -12,22 +12,47 @@ This is the readme of my NLP project
 
 该系统通常 分为四个模块
 
-NLU(natural language understanding) <br/>
-DST(dialogue state tracker)         --DM(Dialogue Manager) <br/>
-POL(dialogue policy)                --DM(Dialogue Manager) <br/>
-NLG(natural language generation) <br/>
+a) NLU(natural language understanding) <br/>
+b) DST(dialogue state tracker)         --DM(Dialogue Manager) <br/>
+c) POL(dialogue policy)                --DM(Dialogue Manager) <br/>
+d) NLG(natural language generation) <br/>
 
 
 ## NLU
-Intent classification implement on CrossWOZ <br/>
-Slot extraction <br/>
-Joint slot-intent <br/>
+1) Intent classification implement on CrossWOZ <br/>
+2) Slot extraction <br/>
+3) Joint slot-intent <br/>
 
-## DST
 
-## POL
+1) Intent classification/意图识别
+通过bert将自然语言进行embeding，进行空间映射到向量空间
+再用embedding的信息进行分类，看属于哪一类或者哪几类
 
-## NLG
+通常分为single intent和multi intents 类别  
+单分类任务使用 cross entropy；
+多分类任务使用binary cross entropy（BCE）
+作为损失函数
+
+2) Slot extraction/把意图做需要的slot 标注出来
+用bert做embedding
+
+3) Joint slot-intent/把上面两件事同时做  
+
+### bert motivation  
+-- unlabeled corpra  
+-- word embedding models are gennerally shallow  
+-- do not take context into account  
+-- longer context dependency for QA  
+-- transfer learning  
+
+
+## DST (dialogue state tracker)
+
+
+## POL (dialogue policy)
+
+
+## NLG (natural language generation)
 
 ## Bert motivation
 
